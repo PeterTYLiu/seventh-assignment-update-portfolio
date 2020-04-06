@@ -1,0 +1,162 @@
+:root {
+  --transition-time: 0.5s;
+  --nav-original-height: 40rem;
+  --nav-shortened-height: 6rem;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Bitter", serif;
+}
+h1 {
+  padding: 5rem 0rem;
+  font-weight: 100;
+  font-size: 6rem;
+}
+
+@media only screen and (max-width: 650px) {
+  h1 {
+    font-size: 2.5rem;
+    padding: 3rem 0rem;
+  }
+}
+nav {
+  height: var(--nav-original-height);
+  /* height: 100vh; */
+  position: fixed;
+  top: 0px;
+  background: white;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+#nav-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0px;
+  transition: all var(--transition-time) ease-in-out;
+  width: 100%;
+  display: flex;
+  max-width: 900px;
+}
+.nav-button {
+  text-align: center;
+  text-transform: uppercase;
+  width: 33.3vw;
+  max-width: 300px;
+  min-width: 100px;
+  display: inline-block;
+  border: 1px solid white;
+  font-size: 1rem;
+  transition: all var(--transition-time) ease-in-out;
+}
+.nav-button > a {
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  font-family: sans-serif;
+  padding-bottom: 5px;
+}
+.nav-button > a:hover {
+  font-weight: bold;
+}
+.active {
+  font-weight: bold;
+}
+section {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+#work {
+  margin-top: calc(var(--nav-original-height) + 20rem);
+}
+.section-inner {
+  padding: 2rem 0rem;
+  padding-top: calc(var(--nav-shortened-height) + 2rem);
+}
+h2 {
+  margin-bottom: 4rem;
+}
+/*==================== Classes for rotating navbar ====================*/
+
+#nav-buttons.rotated-cw {
+  width: 25%;
+  transform: rotate(90deg);
+  margin-top: calc(5rem + 10vw);
+  max-width: 500px;
+}
+.rotated-ccw {
+  transform: rotate(-90deg);
+}
+#tagline,
+#title {
+  transition: all var(--transition-time) ease-in-out;
+}
+
+#tagline {
+  text-align: center;
+  line-height: 2rem;
+}
+#tagline.transparent {
+  opacity: 0;
+  line-height: 0px;
+}
+.short {
+  height: var(--nav-shortened-height);
+  box-shadow: 0px 5px 5px #00000011;
+}
+.small {
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
+}
+
+/*==================== Gallery of Work ====================*/
+
+#gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery-item {
+  flex-grow: 1;
+  width: 360px;
+  padding: 70px 0px;
+  background-color: bisque;
+  border-radius: 8px;
+  margin: 1rem;
+  color: white;
+}
+
+/*==================== Contact section ====================*/
+
+#contact a {
+  color: rgb(0, 125, 184);
+  text-decoration: none;
+  padding-left: 0.6rem;
+  transition: all 0.3s ease-in-out;
+  font-family: sans-serif;
+}
+#contact a:hover {
+  color: rgb(0, 75, 110);
+}
+#contact p {
+  margin-bottom: 1.1rem;
+}
+#contact-details {
+  text-align: left;
+  display: inline-block;
+}
+#contact {
+  margin-bottom: 15rem;
+}
+@media screen and (min-width: 500px) {
+  #contact {
+    margin-bottom: 25rem;
+  }
+}
