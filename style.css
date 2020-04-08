@@ -62,6 +62,7 @@ nav {
 }
 .nav-button > a:hover {
   font-weight: bold;
+  color: #000;
 }
 .active {
   font-weight: bold;
@@ -148,14 +149,14 @@ h2 {
 
 /*==================== Contact section ====================*/
 
-#contact a {
+a {
   color: rgb(0, 125, 184);
   text-decoration: none;
   padding-left: 0.6rem;
   transition: all 0.3s ease-in-out;
   font-family: sans-serif;
 }
-#contact a:hover {
+a:hover {
   color: rgb(0, 75, 110);
 }
 #contact p {
@@ -183,7 +184,7 @@ h2 {
   z-index: 99999;
   position: fixed;
   top: 0;
-  transition: all 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 #overlay.transparent {
   opacity: 0;
@@ -193,4 +194,8 @@ h2 {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  padding: 2rem;
+}
+#overlay-inner > p {
+  margin: 1.5rem 0rem;
 }

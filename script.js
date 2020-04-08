@@ -95,17 +95,17 @@ window.onhashchange = (event) => {
 let projects = {
   project: {
     title: "Mealprep Buddy",
-    image: "images/image.png",
+    image: "images/screenshots/mealprep-buddy.png",
     description:
       "Responsive web assistant which creates a week's worth of meal planning based on the weather conditions of your city. Provides links to recipies and creates a shopping list of needed ingredients in the correct quantities. Group project.",
     tech:
       "OpenWeatherMap API, Spoonacular API, Skeleton.js, local storage, JS, HTML5",
-    GHLink: "somelink.com",
-    liveLink: "somelink.com",
+    GHLink: "https://github.com/PeterTYLiu/Project-1",
+    liveLink: "https://petertyliu.github.io/Project-1/index.html",
   },
   a1: {
     title: "Weather Dashboard",
-    image: "images/image.png",
+    image: "images/screenshots/weather-dashboard.png",
     description:
       "Responsive web app to fetch current weather conditions of any city, as well as provide a five-day forecast. Stores search history locally, with results available offline.",
     tech: "OpenWeatherMap API, Skeleton.js, local storage, JS, HTML5",
@@ -127,6 +127,31 @@ let projects = {
     description:
       "Created designs and graphics for an android game in high school with friends. Game is awful, graphics are great.",
     tech: "GIMP",
+    GHLink: "N/A",
     liveLink: "https://play.google.com/store/apps/details?id=com.RICE",
   },
+  a4: {
+    title: "Goodbye Machine",
+    image: "images/image.png",
+    description: "A fun animation using nothing but pure HTML5 and CSS3.",
+    tech: "CSS3, HTML5",
+    GHLink: "somelink.com",
+    liveLink: "somelink.com",
+  },
 };
+
+let keys = Object.keys(projects);
+
+keys.forEach((key) => {
+  console.log(document.getElementById(key));
+  document.getElementById(key).addEventListener("click", () => {
+    overlayInner.innerHTML = `
+    <h2>${projects[key].title}<span style='float: right; cursor: pointer; color: #bbb; font-size: 1rem' onclick='removeOverlay()'>back</span></h2>
+    <img src='${projects[key].image}' style='border: 1px solid #ddd; max-height: 600px; max-width: 100%; margin-right: auto; margin-left: auto; display: block; margin-bottom: 3rem'>
+    <p>${projects[key].description}</p>
+    <p><strong>Technologies used:</strong> ${projects[key].tech}</p>
+    <p><a href="${projects[key].GHLink}" target="_blank">Github repo ➚</a></p>
+    <p><a href="${projects[key].liveLink}" target="_blank">Live site ➚</a></p>`;
+    addOverlay();
+  });
+});
