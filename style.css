@@ -2,6 +2,7 @@
   --transition-time: 0.5s;
   --nav-original-height: 40rem;
   --nav-shortened-height: 6rem;
+  --background-gradient: linear-gradient(#00000055, #000000aa);
   scroll-behavior: smooth;
 }
 
@@ -31,6 +32,7 @@ nav {
   background: white;
   width: 100%;
   transition: all 0.3s ease-in-out;
+  z-index: 9999;
 }
 #nav-buttons {
   margin-left: auto;
@@ -48,7 +50,6 @@ nav {
   max-width: 300px;
   min-width: 100px;
   display: inline-block;
-  border: 1px solid white;
   font-size: 1rem;
   transition: all var(--transition-time) ease-in-out;
 }
@@ -126,11 +127,23 @@ h2 {
 .gallery-item {
   flex-grow: 1;
   width: 360px;
-  padding: 70px 0px;
-  background-color: bisque;
+  padding: 80px 0px;
+  background-image: var(--background-gradient);
+  background-size: cover;
+  text-shadow: 0px 0px 15px #00000044;
   border-radius: 8px;
   margin: 1rem;
   color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.gallery-item:hover {
+  box-shadow: 0px 4px 12px #888;
+  transform: translateY(-4px);
+}
+#project {
+  background-image: linear-gradient(#00002555, #000925aa),
+    url(images/project1.png);
 }
 
 /*==================== Contact section ====================*/
@@ -159,4 +172,25 @@ h2 {
   #contact {
     margin-bottom: 25rem;
   }
+}
+
+/*==================== Overlay ====================*/
+
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+#overlay.transparent {
+  opacity: 0;
+}
+#overlay-inner {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
