@@ -86,7 +86,6 @@ let addOverlay = () => {
 };
 
 window.onhashchange = (event) => {
-  console.log(event);
   if (!event.newURL.includes("overlay")) {
     removeOverlay();
   }
@@ -109,41 +108,43 @@ let projects = {
     description:
       "Responsive web app to fetch current weather conditions of any city, as well as provide a five-day forecast. Stores search history locally, with results available offline.",
     tech: "OpenWeatherMap API, Skeleton.js, local storage, JS, HTML5",
-    GHLink: "somelink.com",
-    liveLink: "somelink.com",
+    GHLink: "https://github.com/PeterTYLiu/sixth-assignment-weather-dashboard",
+    liveLink:
+      "https://petertyliu.github.io/sixth-assignment-weather-dashboard/",
   },
   a2: {
     title: "Day Planner",
-    image: "images/image.png",
+    image: "images/screenshots/planner.png",
     description:
       "Responsive web app to plan a day. Dynamically changes formatting based on the current time. Code written elegantly so that the starting time and number of hours planned can be easily changed.",
     tech: "JQuery, Bootstrap, local storage, JS, HTML5",
-    GHLink: "somelink.com",
-    liveLink: "somelink.com",
+    GHLink: "https://github.com/PeterTYLiu/fifth-assignment-day-planner",
+    liveLink:
+      "https://petertyliu.github.io/fifth-assignment-day-planner/index.html",
   },
   a3: {
     title: "BubblEscape (android app)",
-    image: "images/image.png",
+    image: "images/screenshots/bubblescape.png",
     description:
       "Created designs and graphics for an android game in high school with friends. Game is awful, graphics are great.",
     tech: "GIMP",
-    GHLink: "N/A",
+    GHLink: `" style="cursor: auto;">No <a style="padding-left: 0px" foo="`,
     liveLink: "https://play.google.com/store/apps/details?id=com.RICE",
   },
   a4: {
     title: "Goodbye Machine",
-    image: "images/image.png",
+    image: "images/screenshots/goodbye.png",
     description: "A fun animation using nothing but pure HTML5 and CSS3.",
     tech: "CSS3, HTML5",
-    GHLink: "somelink.com",
-    liveLink: "somelink.com",
+    GHLink:
+      "https://github.com/PeterTYLiu/about/blob/master/farewellomatic.html",
+    liveLink: "https://petertyliu.github.io/about/farewellomatic",
   },
 };
 
 let keys = Object.keys(projects);
 
 keys.forEach((key) => {
-  console.log(document.getElementById(key));
   document.getElementById(key).addEventListener("click", () => {
     overlayInner.innerHTML = `
     <h2>${projects[key].title}<span style='float: right; cursor: pointer; color: #bbb; font-size: 1rem' onclick='removeOverlay()'>back</span></h2>

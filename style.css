@@ -17,14 +17,20 @@ h1 {
   font-weight: 100;
   font-size: 6rem;
 }
+p {
+  font-family: "Open Sans", sans-serif;
+}
 
-@media only screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   h1 {
     font-size: 2.5rem;
     padding: 3rem 0rem;
   }
   #nav-buttons.rotated-cw {
     transform: rotate(90deg) translateX(-45px) !important;
+  }
+  #work {
+    margin-top: calc(var(--nav-original-height) + 5rem) !important;
   }
 }
 nav {
@@ -135,6 +141,7 @@ h2 {
   padding: 80px 0px;
   background-image: var(--background-gradient);
   background-size: cover;
+  background-position: center;
   text-shadow: 0px 0px 15px #00000044;
   border-radius: 8px;
   margin: 1rem;
@@ -146,11 +153,29 @@ h2 {
   box-shadow: 0px 4px 12px #888;
   transform: translateY(-4px);
 }
-#project {
-  background-image: linear-gradient(#00002555, #000925aa),
-    url(images/project1.png);
+h3 {
+  font-size: 1.3rem;
 }
-
+#project {
+  background-image: linear-gradient(#00002566, #000925bb),
+    url(images/thumbs/project1.png);
+}
+#a1 {
+  background-image: linear-gradient(#00250e66, #092500bb),
+    url(images/thumbs/a1.png);
+}
+#a2 {
+  background-image: linear-gradient(#25000066, #250a00bb),
+    url(images/thumbs/a2.png);
+}
+#a3 {
+  background-image: linear-gradient(#25002066, #250025bb),
+    url(images/thumbs/a3.png);
+}
+#a4 {
+  background-image: linear-gradient(#25002066, #250025bb),
+    url(images/thumbs/a4.png);
+}
 /*==================== Contact section ====================*/
 
 a {
