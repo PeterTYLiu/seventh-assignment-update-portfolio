@@ -144,10 +144,11 @@ let projects = {
 
 let keys = Object.keys(projects);
 
+// Function which creates the overlay content for each project
 keys.forEach((key) => {
   document.getElementById(key).addEventListener("click", () => {
     overlayInner.innerHTML = `
-    <h2>${projects[key].title}<span style='float: right; cursor: pointer; color: #bbb; font-size: 1rem' onclick='removeOverlay()'>back</span></h2>
+    <h2>${projects[key].title}<span style='float: right; cursor: pointer; color: #999;' onclick='removeOverlay()'>✕</span></h2>
     <img src='${projects[key].image}' style='border: 1px solid #ddd; max-height: 600px; max-width: 100%; margin-right: auto; margin-left: auto; display: block; margin-bottom: 3rem'>
     <p>${projects[key].description}</p>
     <p><strong>Technologies used:</strong> ${projects[key].tech}</p>
