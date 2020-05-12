@@ -140,6 +140,14 @@ let projects = {
       "https://github.com/PeterTYLiu/about/blob/master/farewellomatic.html",
     liveLink: "https://petertyliu.github.io/about/farewellomatic",
   },
+  a5: {
+    title: "Eat Da Burger",
+    image: "images/screenshots/burger.jpg",
+    description: "Webapp built using MVC and ORM concepts.",
+    tech: "Heroku, JawsDB, mySQL, Handlebars, Express, CSS3, HTML5",
+    GHLink: "https://github.com/PeterTYLiu/twelfth-assignment-burgers",
+    liveLink: "https://eat-da-burger-a12.herokuapp.com/",
+  },
 };
 
 let keys = Object.keys(projects);

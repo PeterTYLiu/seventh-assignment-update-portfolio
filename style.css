@@ -176,6 +176,10 @@ h3 {
   background-image: linear-gradient(#25002066, #250025bb),
     url(images/thumbs/a4.png);
 }
+#a5 {
+  background-image: linear-gradient(#15250066, #1c2500bb),
+    url(images/thumbs/a5.jpg);
+}
 /*==================== Contact section ====================*/
 
 a {
