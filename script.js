@@ -132,13 +132,13 @@ let projects = {
     liveLink: "https://play.google.com/store/apps/details?id=com.RICE",
   },
   a4: {
-    title: "Goodbye Machine",
-    image: "images/screenshots/goodbye.png",
-    description: "A fun animation using nothing but pure HTML5 and CSS3.",
-    tech: "CSS3, HTML5",
-    GHLink:
-      "https://github.com/PeterTYLiu/about/blob/master/farewellomatic.html",
-    liveLink: "https://petertyliu.github.io/about/farewellomatic",
+    title: "Gotchitama Virtual Pet",
+    image: "images/screenshots/gotchitama.png",
+    description:
+      "Group project: an online virtual pet and battle game. Take care of your pet and battle with other users. Responsive web app built on Node.",
+    tech: "Node, Handlebars, Heroku, Express, Animate.css, Skeleton.css",
+    GHLink: "https://github.com/sandyboon/GotchiTama",
+    liveLink: "https://sleepy-badlands-73130.herokuapp.com/",
   },
   a5: {
     title: "Eat Da Burger",
